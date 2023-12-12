@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+   --light-pink:#FFC0CB;
+   --primary: #C9F31D;
+   --secondary: #131313;
+   --main: #faf0e6;
+   --lighter-color: #1F1F1F;
+   --p-color: #FFFFFFA6;
+   --blue:#3498db;
+   --red:#B22222;
+   --orange:#f39c12;
+   --black:#333;
+   --white:#fff;
+   --light-bg:#eee;
+   --box-shadow:0 5px 10px rgba(0,0,0,.1);
+   --border:2px solid var(--black);
+   --gray:#999;
+   --bg:#c8cbc6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.dashboard {
+  display: flex;
+}
+.logo{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            background:var(--bg);
+     
+}
+.sidebar {
+  background:linear-gradient(0deg,var(--lighter-color),var(--p-color));
+  padding: 15px;
+  min-width: 200px;
+  height:100vh;
+  box-sizing: border-box;
+}
+
+.sidebar h3 {
+  text-align:center;
+  white-space: nowrap;
+  background:linear-gradient(100deg,var(--primary),var(--main));
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+}
+
+.sidebar ul {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  gap:20px;
+  list-style-type: none;
+  padding: 0;
+  margin-top:50px;
+}
+
+.sidebar li {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+  background:linear-gradient(100deg,var(--primary),var(--main));
+           -webkit-text-fill-color:transparent;
+           -webkit-background-clip:text;
+}
+
+
+.sidebar a {
+background:linear-gradient(100deg,var(--primary),var(--main));
+  -webkit-text-fill-color:transparent;
+  -webkit-background-clip:text;
+  text-decoration: none;
+  font-weight:bolder;  
+}
+
+ .container-fluid {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height:100vh;
+      box-sizing: border-box;
+      background:var(--bg);
+      width: -webkit-fill-available;
+    }
+    .dashboard-content{
+      flex: 0;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      grid-template-rows: repeat(2, auto);
+      gap: 30px;
+      max-width: 500px;
+      white-space: nowrap;
+    }
+    .statistic-box h3{
+      color: var(--bg);
+    }
+    .statistic-box p{
+      color: var(--primary);
+    }
+    .statistic-box {
+      background:linear-gradient(0deg,var(--main),var(--secondary),var(--main));
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%; 
+      max-width: 300px;
+  
+    }
+    .statistic-box:hover{
+   cursor: pointer;
+   border: 2px solid var(--lighter-color);
+    }
+
+
+    .client {
+      background:linear-gradient(360deg,var(--lighter-color),var(--p-color),var(--lighter-color));
+      width: fit-content;
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;;
+        }
+    
+.client h2{
+    margin: 15px;
+   background:linear-gradient(100deg,var(--primary),var(--main));
+   -webkit-text-fill-color:transparent;
+   -webkit-background-clip:text;
+
+      }
+
+    .form-group{
+      display: flex;
+      flex-wrap: nowrap;
+      margin-bottom: 15px;
+     
+    }
+
+    .col-md-4 {
+      flex: 0 0 28%; /* Adjust the width of columns as needed */
+      padding: 0 15px;
+      width: 100%; 
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight:600;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      height: 30px; 
+     transition: height 0.3s;
+    }
+     input:hover{
+          border:1px solid var(--secondary);
+           height: 30px; 
+           }
+           select {
+            width: 100%; 
+            padding: 6px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            box-sizing: border-box; 
+          }
+          select:hover{
+            border: 1px solid var(--main);
+          }
+          select option {
+            background-color: var(--main); 
+            color: var(--secondary);
+          }
+          
+.button-container{
+ display:flex;
+ justify-content:flex-end;
+margin-right:15px;
+
+                 }
+
+  .btn1{
+  margin:0 15px;
+  padding: 0.5rem 3.5rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight:bold;
+  color:var(--primary);
+background:var(--secondary);
+border: 1px solid var(--primary);
+}
+  .btn2{
+  margin:0 15px;
+  padding: 0.5rem 3rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight:bold;
+ color:var(--primary);
+background:var(--secondary);
+border: 1px solid var(--primary);
+}
+
+button:hover{
+ color:var(--secondary);
+background:var(--primary);
+border: 1px solid var(--secondary);
+}
+
+b{
+  display: block;
+  text-align: center;
+}
+
+
+     fieldset{
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;;
+      width:700px;
+			border: 2px solid var(--primary);
+			border-radius:25px;
+			padding:10px;
+			margin:auto;
+      background-color: var(--bg);
+    }
+    fieldset h1{
+text-align: center;
+margin: 5px;
+    }
+    .table-container {
+      max-height: 150px; 
+      overflow-y: auto;
+  }
+    
+    table {
+      padding: 5px; 
+      width:700px;
+      
+      border: 2px solid var(--secondary);
+      text-align: center;
+      background-color: var(--gray);
+      margin-bottom: 0; 
+      
+    }
+       td { 
+         border: 2px solid var(--secondary);
+         text-align: center;
+         height: 20px;
+       
+        }
+        td img{
+          filter: brightness(0%);
+       }
+        th { 
+          font-style:italic;
+          color: var(--secondary);
+          border: 2px solid var(--primary);
+          text-align: center;
+          padding: 10px; 
+          font-weight: bolder;
+         } 
+   
+    #member, #plan, #trainer,#package,#schedule,#payment{
+      display: none;
+    }
+    
+
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .sidebar {
+    min-width: 100%; /* Occupy full width on smaller screens */
+    height: auto; /* Adjust height based on content */
+  }
+
+  .container-fluid {
+    align-items: stretch; /* Stretch to full height */
+  }
+
+  .client {
+    width: 100%; /* Occupy full width on smaller screens */
+    top: auto; /* Remove absolute positioning */
+    left: auto; /* Remove absolute positioning */
+    transform: none; /* Remove absolute positioning */
+  }
+
+  fieldset {
+    width: 100%; /* Occupy full width on smaller screens */
+    top: auto; /* Remove absolute positioning */
+    left: auto; /* Remove absolute positioning */
+    transform: none; /* Remove absolute positioning */
+  }
+
+  table {
+    width: 100%; /* Occupy full width on smaller screens */
+  }
+
+  /* Add more specific adjustments as needed for smaller screens */
+}
+@media screen and (max-width: 480px) {
+  .sidebar {
+    display: none; /* Hide the sidebar on smaller screens */
+  }
+
+  .client {
+    position: relative; /* Remove absolute positioning */
+    top: auto; /* Remove top positioning */
+    left: auto; /* Remove left positioning */
+    transform: none; /* Remove transform */
+    width: 100%; /* Occupy full width */
+  }
+
+  fieldset {
+    width: 100%; /* Occupy full width */
+    top: auto; /* Remove absolute positioning */
+    left: auto; /* Remove absolute positioning */
+    transform: none; /* Remove absolute positioning */
+  }
+
+  table {
+    width: 100%; /* Occupy full width */
+  }
+
+  /* Add more specific adjustments for smaller screens */
+}
